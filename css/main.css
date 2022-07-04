@@ -1,35 +1,60 @@
 /* VARIABLES */
 
-:root{
-  /* --main-text-color : #fff; */
+:root {
+  --bgcolor: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
   /* --main-bg-color : #fff; */
   /* --main-font-size : 16px; */
   /* --main-font-weight : 400; */
   /* --main-line-height : 1.5; */
 }
 
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 100;
+  src: local(''),
+    url("../fonts/public-sans-v13-latin-100.woff2") format('woff2'),
+    url('../fonts/public-sans-v13-latin-100.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    url('../fonts/public-sans-v13-latin-regular.woff2') format('woff2'),
+    url('../fonts/public-sans-v13-latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+    url('../fonts/public-sans-v13-latin-500.woff2') format('woff2'),
+    url('../fonts/public-sans-v13-latin-500.woff') format('woff');
+}
+
 /* GENERAL */
 
-html{
+html {
   height: 100%;
   box-sizing: border-box;
 }
 
-img{
+img {
   display: block;
   height: auto;
 }
 
-body{
+body {
   display: flex;
   flex-direction: column;
   height: 100%;
   margin: 0;
   padding: 0;
-  /* font-family: "Roboto", "Arial", sans-serif; */
-  /* font-size: 16px; */
-  /* font-weight: 400; */
-  /* line-height: var(--main-line-height); */
+  font-family: "Public Sans", "Arial", sans-serif;
+  font-weight: 400;
 }
 
 .visually-hidden {
@@ -46,29 +71,167 @@ body{
 }
 
 /* CONTAINER */
-.container{
-  /* max-width: your-size-here; */
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 20px;
-  padding-left: 20px;
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0px 20px;
 }
 
 /* STICKY-FOOTER */
-.site-main{
+.site-main {
   flex-grow: 1;
 }
 
-/* Site header start */
+/* SITE HEADER START */
+.site-header {
+  /* padding: 18px 0px; */
+  background-color: #fff;
+  z-index: 1;
+}
+
+.header-box {
+  display: flex;
+  align-items: center;
+}
+
+.header-box__logo-link {
+  margin-right: auto;
+}
+
+.header-nav {
+  width: 331px;
+  margin-right: 226px;
+}
+
+.header-nav__list {
+  display: flex;
+  margin: 0px;
+  padding-left: 0px;
+  list-style-type: none;
+}
+
+.header-nav__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.header-nav__link {
+  display: inline-block;
+  padding: 32px 0px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #9597A5;
+  border-bottom: 4px solid transparent;
+  letter-spacing: -0.107692px;
+  text-decoration: none;
+}
+
+.header-nav__link:hover {
+  border-bottom: 4px solid #30C88F;
+  ;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.request-link {
+  display: inline-block;
+  padding: 8px 36px 8px 33px;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #33d35e 0%, #2AB6D9 99.58%);
+  border-radius: 22px;
+  text-decoration: none;
+}
+
+.request-link:hover {
+  background-color: #fff;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+  border-radius: 22px;
+  transition: all 0.3s ease;
+}
 
 /* Site header end */
 
 /* Site main start */
 
-/* Section start */
+/* Section digital start */
+.digital {
+  position: relative;
+  padding: 170px 0px;
+  background-color: #f2f2f2;
+}
 
-/* Section end */
+.digital::after {
+  position: absolute;
+  content: "";
+  top: calc(50% - 582px);
+  left: calc(50% - 76px);
+  width: 1329px;
+  height: 1088px;
+  background-image: url("../images/bg-hero.svg");
+  background-repeat: no-repeat;
+  z-index: 0;
+  width: 1371px;
+  height: 1038px;
+}
 
+.digital-box {
+  width: 447px;
+}
+
+.digital-box__title {
+  margin: 0px;
+  margin-bottom: 24px;
+  font-size: 56px;
+  line-height: 64px;
+  font-weight: 100;
+  color: #2D314D;
+  letter-spacing: -1px;
+}
+
+.digital-box__text {
+  margin: 0px;
+  margin-bottom: 36px;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.28125px;
+  color: #9597A5;
+}
+
+/* Section digital end */
+
+/* Section choose start */
+.choose {
+  padding: 96px 0px;
+  background-color: #F4F5F7;
+}
+
+.choose-box {
+  width: 635px;
+}
+
+.choose-title {
+  margin: 0px;
+  margin-bottom: 16px;
+  font-size: 40px;
+  line-height: 64px;
+  font-weight: 100;
+  color: #2D314D;
+  letter-spacing: -0.714286px;
+}
+
+.choose-text {
+  margin: 0px;
+  margin-bottom: 72px;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.28125px;
+  color: #9597A5;
+}
+
+/* Section choose end */
 /* Site main end */
 
 /* Site footer start */
