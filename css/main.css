@@ -1,11 +1,11 @@
 /* VARIABLES */
 
 :root {
-  --bgcolor: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
-  /* --main-bg-color : #fff; */
-  /* --main-font-size : 16px; */
-  /* --main-font-weight : 400; */
-  /* --main-line-height : 1.5; */
+  --bglineg-color: linear-gradient(135deg, #33d35e 0%, #2ab6d9 99.58%);
+  --white-color : #fff;
+  --bb-color: #30c88f;
+  --text-color: #9597a5;
+  --title-color: #2d314d;
 }
 
 @font-face {
@@ -77,6 +77,16 @@ body {
   padding: 0px 20px;
 }
 
+/* MAIN CLASS */
+.digital-box__text,
+.choose-box__text{
+  margin: 0px;
+  margin-bottom: 36px;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.28125px;
+  color: var(--text-color);
+}
 /* STICKY-FOOTER */
 .site-main {
   flex-grow: 1;
@@ -84,8 +94,7 @@ body {
 
 /* SITE HEADER START */
 .site-header {
-  /* padding: 18px 0px; */
-  background-color: #fff;
+  background-color: var(--white-color);
   z-index: 1;
 }
 
@@ -119,14 +128,14 @@ body {
   padding: 32px 0px;
   font-size: 14px;
   line-height: 16px;
-  color: #9597A5;
+  color: var(--text-color);
   border-bottom: 4px solid transparent;
   letter-spacing: -0.107692px;
   text-decoration: none;
 }
 
 .header-nav__link:hover {
-  border-bottom: 4px solid #30C88F;
+  border-bottom: 4px solid var(--bb-color);
   ;
   z-index: 2;
   transition: all 0.3s ease;
@@ -145,7 +154,7 @@ body {
 }
 
 .request-link:hover {
-  background-color: #fff;
+  background-color: var(--white-color);
   mix-blend-mode: normal;
   opacity: 0.4;
   border-radius: 22px;
@@ -187,48 +196,41 @@ body {
   font-size: 56px;
   line-height: 64px;
   font-weight: 100;
-  color: #2D314D;
+  color: var(--title-color);
   letter-spacing: -1px;
 }
 
-.digital-box__text {
-  margin: 0px;
-  margin-bottom: 36px;
-  font-size: 18px;
-  line-height: 28px;
-  letter-spacing: -0.28125px;
-  color: #9597A5;
-}
+
 
 /* Section digital end */
 
 /* Section choose start */
 .choose {
   padding: 96px 0px;
-  background-color: #F4F5F7;
+  background-color: #f4f5f7;
 }
 
 .choose-box {
   width: 635px;
 }
 
-.choose-title {
+.choose-box__title {
   margin: 0px;
   margin-bottom: 16px;
   font-size: 40px;
   line-height: 64px;
   font-weight: 100;
-  color: #2D314D;
+  color: var(--title-color);
   letter-spacing: -0.714286px;
 }
 
-.choose-text {
+.choose-box__text {
   margin: 0px;
   margin-bottom: 72px;
   font-size: 18px;
   line-height: 28px;
   letter-spacing: -0.28125px;
-  color: #9597A5;
+  color: var(--text-color);
 }
 
 /* Section choose end */
