@@ -443,7 +443,7 @@ body {
 
 .choose-box {
   width: 635px;
-  margin-bottom: 72px;
+  margin-bottom: 184px;
 }
 
 .choose-box__title {
@@ -481,6 +481,7 @@ body {
   content: "";
   position: absolute;
   display: block;
+  top: -110px;
   width: 72px;
   height: 72px;
   margin-bottom: 40px;
